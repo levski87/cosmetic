@@ -11,4 +11,5 @@ class AboutController extends Controller
     public function home() {
     	echo "test";
     }
+    
 }

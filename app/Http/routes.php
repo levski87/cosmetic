@@ -16,9 +16,12 @@ Route::get('/', function () {
 });
 
 
-Route::get('/about', function () {
-	return view('about');
+Route::get('/users/create', 'UsersController@create');
 
-});
+Route::post('/users/create', 'UsersController@store');
 
-Route::get('register', 'RegisterController@index');
+Route::get('users', 'UsersController@index');
+
+Route::get('users/{id}', 'UsersController@show');
+
+
