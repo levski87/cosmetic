@@ -24,4 +24,8 @@ Route::get('users', 'UsersController@index');
 
 Route::get('users/{id}', 'UsersController@show');
 
+Route::get('login', 'LoginController@index');
+
+
+
 

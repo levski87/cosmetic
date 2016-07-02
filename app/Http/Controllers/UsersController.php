@@ -54,6 +54,10 @@ class UsersController extends Controller
 		return Redirect('users');
 
 	}
+	
+	public function login(){
+		return ;
+	}
 
 
 
