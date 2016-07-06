@@ -26,6 +26,13 @@ Route::get('users/{id}', 'UsersController@show');
 
 Route::get('login', 'LoginController@index');
 
+Route::post('login', 'LoginController@check');
 
+Route::get('/profile', 'ProfileController@index');
+    
+Route::get('/logout', function () {
+    Auth::logout();
+    return Redirect('users');
+});
 
 

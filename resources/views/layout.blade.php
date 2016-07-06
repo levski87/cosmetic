@@ -9,13 +9,29 @@
 </head>
 
 <body>
+
+@if (Auth::check())
 <nav class="navbar navbar-default navbar-fixed top inverse">
 	<div container="container-fluid">
-		 <a class="navbar-brand pull-right" href="/login">Login</a>
-		 <a class="navbar-brand pull-right" href="/users/create">Sign Up!</a>
+		 <a class="navbar-brand pull-right" href="/profile">Profile</a>
+		 <a class="navbar-brand pull-right" href="/logout">Log Out!</a>
 	</div>
 
 </nav>
+
+@else
+
+<nav class="navbar navbar-default navbar-fixed top inverse">
+	<div container="container-fluid">
+		<a class="navbar-brand pull-right" href="/login">Login</a>
+		<a class="navbar-brand pull-right" href="/users/create">Sign Up!</a>
+	</div>
+
+</nav>
+
+@endif
+
+
 
 @yield('content')
 
